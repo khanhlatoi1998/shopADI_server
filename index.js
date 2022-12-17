@@ -15,6 +15,10 @@ app.use(cors());
 
 app.use('/api', jsonPaser, indexRouter);
 
+app.get('/', (req, res) => {
+    res.send('server start')
+});
+
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });

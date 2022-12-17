@@ -4,17 +4,32 @@ import db from "../config.js";
 const collection = db.collection('products');
 
 
-export const Item = (req, res, next) => {
-    const item = data.products.find(item => item.id == req.params.id);
-    res.send(item);
-
+export const getItem = (req, res, next) => {
+    try {
+        const id = req.params.id;
+        const find = collection
+        .find({
+            id: id
+        })
+        .toArray((err, result)  => {
+            if (!err) {
+                res.json(result);
+                res.status(200);
+            } else {
+                res.status(400);
+                return;
+            }
+        })
+    } catch (error) {
+        
+    }
 }
 
-export const ListItem = (req, res, next) => {
+export const getListItem = (req, res, next) => {
     res.json(data);
 };
 
-export const Pagination = async (req, res, next) => {
+export const getPaginationItem = async (req, res, next) => {
     try {
         const limit = Number(req.query.limit) || 12;
         const page = Number(req.query.page) || 1;
@@ -33,7 +48,7 @@ export const Pagination = async (req, res, next) => {
     } catch (error) { }
 };
 
-export const Category = (req, res, next) => {
+export const getCategoryItem = (req, res, next) => {
     try {
         const category = req.params.category;
         const limit = Number(req.query.limit) || 12;

@@ -1,17 +1,17 @@
 import express from 'express';
-import { Item } from '../controllers/products.js';
-import { ListItem } from '../controllers/products.js';
-import { Pagination } from '../controllers/products.js';
-import { Category } from '../controllers/products.js';
+import { getItem } from '../controllers/products.js';
+import { getListItem } from '../controllers/products.js';
+import { getPaginationItem } from '../controllers/products.js';
+import { getCategoryItem } from '../controllers/products.js';
 
 
 
 const productsRouter = express.Router();
 
 
-productsRouter.get('/item/:id', Item);
-productsRouter.get('/all', ListItem);
-productsRouter.get('/category/:category', Category);
-productsRouter.get('/', Pagination);
+productsRouter.get('/item/:id', getItem);
+productsRouter.get('/all', getListItem);
+productsRouter.get('/category/:category', getCategoryItem);
+productsRouter.get('/', getPaginationItem);
 
 export default productsRouter;
