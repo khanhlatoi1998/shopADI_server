@@ -13,9 +13,13 @@ app.use(bodyParser.json({ limit: '3000md' }));
 app.use(bodyParser.urlencoded({ extended: false, limit: '3000md' }));
 app.use(cors());
 
-app.use('/api', jsonPaser, indexRouter);
+// app.use('/api', jsonPaser, indexRouter);
 
 app.get('/', (req, res) => {
+    res.send('server start')
+});
+
+app.get('/api', (req, res) => {
     res.send('server start')
 });
 
