@@ -95,21 +95,63 @@ export const data = {
             ]
         },
     ],
-    brand: [
-        {
-            image: 'https://opencart.mahardhi.com/MT01/adi/image/catalog/banners/sub-banner1.jpg',
-            name: 'fashion',
-        },
-        {
-            image: 'https://opencart.mahardhi.com/MT01/adi/image/catalog/banners/sub-banner2.jpg',
-            name: 'women',
-        },
-        {
-            image: 'https://opencart.mahardhi.com/MT01/adi/image/catalog/banners/sub-banner3.jpg',
-            name: 'men',
-        },
-        
-    ],
+    components: {
+        brand: [
+            {
+                image: 'https://opencart.mahardhi.com/MT01/adi/image/catalog/banners/sub-banner1.jpg',
+                name: 'fashion',
+                isShow: true
+            },
+            {
+                image: 'https://opencart.mahardhi.com/MT01/adi/image/catalog/banners/sub-banner2.jpg',
+                name: 'women',
+                isShow: true
+            },
+            {
+                image: 'https://opencart.mahardhi.com/MT01/adi/image/catalog/banners/sub-banner3.jpg',
+                name: 'men',
+                isShow: true
+            },
+            {
+                image: 'https://opencart.mahardhi.com/MT01/adi/image/catalog/banners/sub-banner1.jpg',
+                name: 'fashion',
+                isShow: true
+            },
+            {
+                image: 'https://opencart.mahardhi.com/MT01/adi/image/catalog/banners/sub-banner2.jpg',
+                name: 'women',
+                isShow: true
+            },
+            {
+                image: 'https://opencart.mahardhi.com/MT01/adi/image/catalog/banners/sub-banner3.jpg',
+                name: 'men',
+                isShow: true
+            },
+            
+        ],
+        partners: [
+            {
+                image: 'https://opencart.mahardhi.com/MT01/adi/image/cache/catalog/brand/04-170x70.jpg',
+                name: '',
+                isShow: true
+            },
+            {
+                image: 'https://opencart.mahardhi.com/MT01/adi/image/cache/catalog/brand/04-170x70.jpg',
+                name: '',
+                isShow: true
+            },
+        ],
+        banner: [
+            {
+                image: 'https://opencart.mahardhi.com/MT01/adi/image/cache/catalog/banners/main-banner1-1920x650.jpg',
+                isShow: true
+            },
+            {
+                image: 'https://opencart.mahardhi.com/MT01/adi/image/cache/catalog/banners/main-banner2-1920x650.jpg',
+                isShow: false
+            }
+        ],
+    },
     posts: [
         {
             id: 'asds123',
@@ -146,26 +188,36 @@ export const data = {
         },
 
     ],
-    card: [
+    user: [
         {
-            id: 123,
             image: '',
-            name: '',
-            category: '',
-            color: '',
-            slug: '',
-            price: 140000,
-            discount: 120000,
-            rating: 4,
-            view: 12,
-            share: 0,
-            comment: [
+            username: '',
+            email: '',
+            userId: '',
+            password: '',
+            card: [
                 {
-                    userId: '',
-                    desc: ''
-                }
-            ]
-        },
+                    id: 123,
+                    image: '',
+                    name: '',
+                    category: '',
+                    color: '',
+                    slug: '',
+                    price: 140000,
+                    discount: 120000,
+                    rating: 4,
+                    view: 12,
+                    share: 0,
+                    comment: [
+                        {
+                            userId: '',
+                            desc: ''
+                        }
+                    ]
+                },
+            ],
+            order: []
+        }
     ],
     order: [
         {
@@ -183,40 +235,18 @@ export const data = {
             createDate: '12/14/2002'
         },
     ],
-    auth: [
+    account_cms: [
         {
-            image: '',
-            username: '',
-            email: '',
             userId: '',
-            passwork: '',
-        }
-    ],
-    partners: [
-        {
-            image: 'https://opencart.mahardhi.com/MT01/adi/image/cache/catalog/brand/04-170x70.jpg'
-        }
-    ],
-    banner: [
-        {
-            image: 'https://opencart.mahardhi.com/MT01/adi/image/cache/catalog/banners/main-banner1-1920x650.jpg'
+            email: '',
+            password: '',
+            type: 'admin'
         },
         {
-            image: 'https://opencart.mahardhi.com/MT01/adi/image/cache/catalog/banners/main-banner2-1920x650.jpg'
-        }
+            userId: '',
+            email: '',
+            password: '',
+            type: 'cutomer'
+        },
     ],
-    comment: [
-        {
-            image: '',
-            username: '',
-            desc: ''
-        }
-    ],
-    admin: {
-        userId: '',
-        email: '',
-        passwork: '',
-        type: ''
-    },
-    
 };
