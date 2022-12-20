@@ -1,20 +1,26 @@
 import { data } from "../data.js";
 import db from "../config.js";
+import { ObjectID } from "bson";
 
 const collection = db.collection('products');
 
 
 export const getItem = (req, res, next) => {
     try {
-        const id = req.params.id;
+        const id =  req.params.id;
         const find = collection
             .find({
-                id: id
+                _id: ObjectID(id)
             })
             .toArray((err, result) => {
                 if (!err) {
-                    res.json(result);
-                    res.status(200);
+                    if (result.length > 0) {
+                        res.json(result[0]);
+                        res.status(200);
+                        console.log(result)
+                    } else {
+                        res.status(200).send('not found id product');
+                    }
                 } else {
                     res.status(400);
                     return;
@@ -34,7 +40,7 @@ export const getListItem = async (req, res, next) => {
         const getCountPage = await collection.countDocuments().then((count) => {
             total = count;
         });
-        
+
         const find = collection
             .find()
             .skip((page * limit) - limit)
@@ -61,7 +67,7 @@ export const getCategoryItem = async (req, res, next) => {
         const limit = Number(req.query.limit) || 10;
         const page = Number(req.query.page) || 1;
         let total = 1;
-        const getCountPage = await collection.find({category: category}).count();
+        const getCountPage = await collection.find({ category: category }).count();
 
         const find = collection
             .find({

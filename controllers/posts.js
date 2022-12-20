@@ -4,12 +4,22 @@ const collection = db.collection('posts');
 
 export const getPost = async (req, res) => {
     const id = req.params.id;
+    const limit = req.query.limit || 10;
+    const page = req.query.page || 1;
+
+    const total = await collection.find().count();
+
     const find = collection.find({
         id: id,
     }).toArray((err, result) => {
         if (!err) {
             if (result.length > 0) {
-                res.status(200).json(result[0]);
+                res.status(200).json({
+                    limit: limit,
+                    page: page,
+                    total: total,
+                    data: result[0]
+                });
             } else {
                 res.status(200).send('not found id post');
             }
