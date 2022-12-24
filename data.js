@@ -11,7 +11,24 @@ export const data = {
             ],
             name: 'casual shirt',
             category: 'men',
-            color: '',
+            color_group: [
+                {
+                    hex: '#ff0000de',
+                    active: true,
+                    name: 'red'
+                },
+                {
+                    hex: '#ff9900de',
+                    active: false,
+                    name: 'cam'
+                },
+                {
+                    hex: '#33ff00de',
+                    active: false,
+                    name: 'xanh la'
+                },
+            ],
+            size_group: ['S', 'M', 'XL'],
             slug: 'casual-shirt',
             type: 'special',
             like: 1,
