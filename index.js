@@ -9,8 +9,8 @@ const PORT = process.env.PORT || 5000;
 const jsonPaser = bodyParser.json();
 
 // limit required use 3000md
-app.use(bodyParser.json({ limit: '3000md' }));
-app.use(bodyParser.urlencoded({ extended: false, limit: '3000md' }));
+app.use(bodyParser.json({ limit: '3000mb' }));
+app.use(bodyParser.urlencoded({ extended: false, limit: '3000mb' }));
 app.use(cors());
 
 app.use('/api', jsonPaser, indexRouter);

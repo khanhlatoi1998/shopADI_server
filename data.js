@@ -238,7 +238,13 @@ export const data = {
     ],
     order: [
         {
-            userId: 'id ne 1244',
+            user: {
+                userId: '',
+                name: 'khanh',
+                phone: '0975481177',
+                address: 'An Giang',
+                note: 'toi mua cho vui'
+            },
             items: [
                 {
                     item: {

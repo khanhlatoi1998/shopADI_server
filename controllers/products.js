@@ -17,7 +17,6 @@ export const getItem = (req, res, next) => {
                     if (result.length > 0) {
                         res.json(result[0]);
                         res.status(200);
-                        console.log(result)
                     } else {
                         res.status(200).send('not found id product');
                     }
