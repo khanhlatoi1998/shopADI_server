@@ -15,7 +15,7 @@ export const getListOrder = (req, res, next) => {
 export const postOrder = (req, res, next) => {
     try {
         const order = req.body.data;
-        // const insert = collection.insertOne(order);
+        const insert = collection.insertOne(order);
         res.status(200).send(order);
     } catch (error) {
         res.status(400).send('order fail!');
