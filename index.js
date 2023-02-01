@@ -13,7 +13,7 @@ app.use(bodyParser.json({ limit: '3000mb' }));
 app.use(bodyParser.urlencoded({ extended: false, limit: '3000mb' }));
 app.use(cors());
 
-app.use('/api', jsonPaser, indexRouter);
+app.use('/api', indexRouter);
 
 app.get('/', (req, res) => {
     res.send('server start')

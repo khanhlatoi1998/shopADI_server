@@ -149,3 +149,13 @@ export const getCategoryItem = async (req, res, next) => {
             })
     } catch (error) { }
 };
+
+export const createItem = async (req, res, next) => {
+    try {
+          const data = req.body.data;
+        console.log(data);
+        res.json(req.body.data);
+    } catch (error) {
+        
+    }
+};
