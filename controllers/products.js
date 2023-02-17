@@ -7,7 +7,7 @@ const collection = db.collection('products');
 
 export const getItem = (req, res, next) => {
     try {
-        const id =  req.params.id;
+        const id = req.params.id;
         const find = collection
             .find({
                 _id: ObjectID(id)
@@ -34,7 +34,7 @@ export const getListItem = async (req, res, next) => {
     // for(let i = 1; i < 20; i++) {    
     //     collection.insertOne(  {
     //         image: 'https://opencart.mahardhi.com/MT01/adi/image/cache/catalog/product/10-255x348.jpg',
-    //         subImage: [
+    //         listImage: [
     //             'https://opencart.mahardhi.com/MT01/adi/image/cache/catalog/product/15-255x348.jpg',
     //             'https://opencart.mahardhi.com/MT01/adi/image/cache/catalog/product/3-255x348.jpg',
     //             'https://opencart.mahardhi.com/MT01/adi/image/cache/catalog/product/2-255x348.jpg',
@@ -79,7 +79,7 @@ export const getListItem = async (req, res, next) => {
     //         type: 'special',
     //         like: 1,
     //         price: 140000,
-    //         discount: 0,
+    //         oldPrice: 0,
     //         rating: 4,
     //         review: 12,
     //         share: 0,
@@ -152,10 +152,11 @@ export const getCategoryItem = async (req, res, next) => {
 
 export const createItem = async (req, res, next) => {
     try {
-          const data = req.body.data;
+        const data = req.body.data;
         console.log(data);
-        res.json(req.body.data);
+        collection.insertOne(data);
+        res.send(req.body.data);
     } catch (error) {
-        
+
     }
 };

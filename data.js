@@ -3,7 +3,7 @@ export const data = {
         {
             id: 1,
             image: 'https://opencart.mahardhi.com/MT01/adi/image/cache/catalog/product/10-255x348.jpg',
-            subImage: [
+            listImage: [
                 'https://opencart.mahardhi.com/MT01/adi/image/cache/catalog/product/15-255x348.jpg',
                 'https://opencart.mahardhi.com/MT01/adi/image/cache/catalog/product/3-255x348.jpg',
                 'https://opencart.mahardhi.com/MT01/adi/image/cache/catalog/product/2-255x348.jpg',
@@ -33,7 +33,7 @@ export const data = {
             type: 'special',
             like: 1,
             price: 140000,
-            discount: 0,
+            oldPrice: 0,
             rating: 4,
             view: 12,
             share: 0,
@@ -47,7 +47,7 @@ export const data = {
         {
             id: 2,
             image: 'https://opencart.mahardhi.com/MT01/adi/image/cache/catalog/product/1-255x348.jpg',
-            subImage: [
+            listImage: [
                 'https://opencart.mahardhi.com/MT01/adi/image/cache/catalog/product/2-255x348.jpg'
             ],
             name: 'hoodies',
@@ -56,7 +56,7 @@ export const data = {
             color: '',
             slug: 'hoodies',
             price: 140000,
-            discount: 120000,
+            oldPrice: 120000,
             rating: 4,
             view: 12,
             share: 0,
@@ -70,7 +70,7 @@ export const data = {
         {
             id: 3,
             image: 'https://opencart.mahardhi.com/MT01/adi/image/cache/catalog/product/3-255x348.jpg',
-            subImage: [
+            listImage: [
                 'https://opencart.mahardhi.com/MT01/adi/image/cache/catalog/product/13-255x348.jpg'
             ],
             name: 'ladied',
@@ -78,7 +78,7 @@ export const data = {
             color: '',
             slug: '',
             price: 140000,
-            discount: 120000,
+            oldPrice: 120000,
             rating: 4,
             view: 12,
             share: 0,
@@ -92,7 +92,7 @@ export const data = {
         {
             id: 4,
             image: 'https://opencart.mahardhi.com/MT01/adi/image/cache/catalog/product/5-255x348.jpg',
-            subImage: [
+            listImage: [
                 'https://opencart.mahardhi.com/MT01/adi/image/cache/catalog/product/2-255x348.jpg'
             ],
             name: 'casual shirt',
@@ -100,7 +100,7 @@ export const data = {
             color: '',
             slug: '',
             price: 140000,
-            discount: 120000,
+            oldPrice: 120000,
             rating: 4,
             view: 12,
             share: 0,
@@ -221,7 +221,7 @@ export const data = {
                     color: '',
                     slug: '',
                     price: 140000,
-                    discount: 120000,
+                    oldPrice: 120000,
                     rating: 4,
                     view: 12,
                     share: 0,
